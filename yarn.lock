@@ -2629,10 +2629,10 @@ eslint-config-prettier@^8.3.0:
   resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
   integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
 
-eslint-config-thomas-clark@^1.11.0:
-  version "1.11.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-thomas-clark/-/eslint-config-thomas-clark-1.11.0.tgz#9d3eaf2d4fdae1903ad5dfacfcca79c06714a2d5"
-  integrity sha512-rbMKPBAUrU7osVyFM1o3pkFxfAVJJA8AhK1gFqbRvSwWZgsx4ZWtL140Sq1zCDJi8YGUyZGq8hxpczn8EWmIUQ==
+eslint-config-thomas-clark@^1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-thomas-clark/-/eslint-config-thomas-clark-1.12.0.tgz#17952b667622339b846fc0b1f2032c75bbcbc8ce"
+  integrity sha512-8pFhNwjxYiVYkLe+jFfG39KSsqAXrdLECsjhhjYAeDq6LASBuwMpvJnPq77C67VbPsaf8JMlBE/dWqlL2syWTQ==
   dependencies:
     "@typescript-eslint/eslint-plugin" "^4.18.0"
     "@typescript-eslint/parser" "^4.18.0"
