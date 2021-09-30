@@ -2,137 +2,20 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
+   
   <div
-    class="jsx-1858456388 container"
+    class="MuiBox-root css-0"
   >
-    <main
-      class="jsx-1858456388"
+    <button
+      class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+      tabindex="0"
+      type="button"
     >
-      <h1
-        class="jsx-1858456388 title"
-      >
-        Welcome to 
-        <a
-          class="jsx-1858456388"
-          href="https://nextjs.org"
-        >
-          Next.js!
-        </a>
-      </h1>
-      <p
-        class="jsx-1858456388 description"
-      >
-        Get started by editing 
-        <code
-          class="jsx-1858456388"
-        >
-          pages/index.tsx
-        </code>
-      </p>
-      <button
-        class="jsx-1858456388"
-      >
-        Test Button
-      </button>
-      <div
-        class="jsx-1858456388 grid"
-      >
-        <a
-          class="jsx-1858456388 card"
-          href="https://nextjs.org/docs"
-        >
-          <h3
-            class="jsx-1858456388"
-          >
-            Documentation →
-          </h3>
-          <p
-            class="jsx-1858456388"
-          >
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-        <a
-          class="jsx-1858456388 card"
-          href="https://nextjs.org/learn"
-        >
-          <h3
-            class="jsx-1858456388"
-          >
-            Learn →
-          </h3>
-          <p
-            class="jsx-1858456388"
-          >
-            Learn about Next.js in an interactive course with quizzes!
-          </p>
-        </a>
-        <a
-          class="jsx-1858456388 card"
-          href="https://github.com/vercel/next.js/tree/master/examples"
-        >
-          <h3
-            class="jsx-1858456388"
-          >
-            Examples →
-          </h3>
-          <p
-            class="jsx-1858456388"
-          >
-            Discover and deploy boilerplate example Next.js projects.
-          </p>
-        </a>
-        <a
-          class="jsx-1858456388 card"
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        >
-          <h3
-            class="jsx-1858456388"
-          >
-            Deploy →
-          </h3>
-          <p
-            class="jsx-1858456388"
-          >
-            Instantly deploy your Next.js site to a public URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-    <footer
-      class="jsx-1858456388"
-    >
-      <a
-        class="jsx-1858456388"
-        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-        rel="noopener noreferrer"
-        target="_blank"
-      >
-        Powered by 
-        <div
-          style="display: inline-block; max-width: 100%; overflow: hidden; position: relative; box-sizing: border-box; margin: 0px;"
-        >
-          <div
-            style="box-sizing: border-box; display: block; max-width: 100%;"
-          >
-            <img
-              alt=""
-              aria-hidden="true"
-              src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjQiIGhlaWdodD0iMzIiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmVyc2lvbj0iMS4xIi8+"
-              style="max-width: 100%; display: block; margin: 0px; padding: 0px;"
-            />
-          </div>
-          <img
-            alt="Vercel Logo"
-            data-nimg="intrinsic"
-            decoding="async"
-            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"
-            style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; box-sizing: border-box; padding: 0px; margin: auto; display: block; width: 0px; height: 0px; min-width: 100%; max-width: 100%; min-height: 100%; max-height: 100%;"
-          />
-          <noscript />
-        </div>
-      </a>
-    </footer>
+      test button
+      <span
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+      />
+    </button>
   </div>
 </DocumentFragment>
 `;

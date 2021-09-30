@@ -21,13 +21,18 @@
 	},
 	"rules": {
 		"react/react-in-jsx-scope": 0,
+		"react/display-name": 0,
+		"react/prop-types": 0,
 		"no-console": [
 			1,
 			{
 				"allow": ["warn", "error"]
 			}
 		],
+		"@typescript-eslint/explicit-function-return-type": 0,
+		"@typescript-eslint/explicit-module-boundary-types": 0,
 		"quotes": ["error", "single"],
-		"jsdoc/require-jsdoc": 0
+		"jsdoc/require-jsdoc": 0,
+		"arrow-body-style": ["error", "as-needed"]
 	}
 }
