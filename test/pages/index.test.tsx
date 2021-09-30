@@ -11,7 +11,7 @@ describe('Home page', () => {
 	it('clicking button triggers alert', () => {
 		const { getByText } = render(<Home />, {});
 		window.alert = jest.fn();
-		fireEvent.click(getByText('Test Button'));
+		fireEvent.click(getByText('test button'));
 		expect(window.alert).toHaveBeenCalledWith('With typescript and Jest');
 	});
 });
