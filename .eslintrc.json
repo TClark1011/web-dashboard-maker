@@ -1,0 +1,33 @@
+{
+	"parser": "@typescript-eslint/parser",
+	"plugins": ["@typescript-eslint"],
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended",
+		"thomas-clark",
+		"prettier"
+	],
+	"env": {
+		"es6": true,
+		"browser": true,
+		"jest": true,
+		"node": true
+	},
+	"settings": {
+		"react": {
+			"version": "detect"
+		}
+	},
+	"rules": {
+		"react/react-in-jsx-scope": 0,
+		"no-console": [
+			2,
+			{
+				"allow": ["warn", "error"]
+			}
+		],
+		"quotes": ["error", "single"],
+		"jsdoc/require-jsdoc": "off"
+	}
+}
