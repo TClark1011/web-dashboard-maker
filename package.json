@@ -6,23 +6,26 @@
 		"build": "next build",
 		"start": "next start",
 		"type-check": "tsc --pretty --noEmit",
-		"format": "prettier --write .",
 		"lint": "eslint . --ext ts --ext tsx --ext js",
+		"prepare": "husky install",
+		"pre-commit": "lint-staged",
+		"commit": "cz",
+		"release": "standard-version",
+		"fix-husky": "npx husky set .husky/commit-msg 'npx --no-install commitlint --edit \"$1\"' & npx husky set .husky/pre-commit 'npm run pre-commit'",
 		"test": "jest",
-		"test-all": "yarn lint && yarn type-check && yarn test"
-	},
-	"lint-staged": {
-		"*.@(ts|tsx)": [
-			"yarn lint",
-			"yarn format"
-		]
+		"clean": "yarn clean:modules & yarn clean:build & yarn clean:lock",
+		"clean:modules": "rm -r --force node_modules",
+		"clean:build": "rm -r --force build",
+		"clean:lock": "rm --force yarn.lock"
 	},
 	"dependencies": {
-		"next": "latest",
+		"next": "^11.1.2",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2"
 	},
 	"devDependencies": {
+		"@commitlint/cli": "^13.2.0",
+		"@commitlint/config-conventional": "^13.2.0",
 		"@testing-library/react": "^11.2.5",
 		"@types/jest": "^26.0.23",
 		"@types/node": "^14.14.25",
@@ -30,16 +33,25 @@
 		"@typescript-eslint/eslint-plugin": "^4.14.2",
 		"@typescript-eslint/parser": "^4.14.2",
 		"babel-jest": "^27.0.2",
+		"commitizen": "^4.2.4",
+		"cz-customizable": "^6.3.0",
 		"eslint": "^7.19.0",
 		"eslint-config-prettier": "^7.2.0",
 		"eslint-config-thomas-clark": "^1.11.0",
 		"eslint-plugin-react": "^7.19.0",
-		"husky": "^4.2.3",
+		"husky": "^7.0.0",
 		"identity-obj-proxy": "^3.0.0",
 		"jest": "^27.0.4",
 		"jest-watch-typeahead": "^0.6.1",
-		"lint-staged": "^10.0.10",
+		"lint-staged": "^11.1.2",
 		"prettier": "^2.0.2",
+		"prettier-eslint": "^13.0.0",
+		"standard-version": "^9.3.1",
 		"typescript": "^4.1.3"
+	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-customizable"
+		}
 	}
 }

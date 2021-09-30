@@ -1,0 +1,44 @@
+name: release
+on:
+  pull_request:
+    types: 
+      - closed
+    branches: 
+      - main
+jobs:
+  release:
+    if: github.event.pull_request.merged == true && !contains(github.event.pull_request.labels.*.name, 'force-release:none')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: '0'
+      - run: git config --global user.email "thomassiclark@gmail.com"
+      - run: git config --global user.name "version bot"
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+      - name: Cache node modules
+        uses: actions/cache@v2
+        env:
+          cache-name: cache-node-modules
+        with:
+          # npm cache files are stored in `~/.npm` on Linux/macOS
+          path: ~/.npm
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+      - run: npm install
+      - run: npm run release
+        if: "!contains(github.event.pull_request.labels.*.name, 'force-release:patch') && !contains(github.event.pull_request.labels.*.name, 'force-release:minor') && !contains(github.event.pull_request.labels.*.name, 'force-release:major')"
+      - run: npm run release -- --release-as patch
+        if: "contains(github.event.pull_request.labels.*.name, 'force-release:patch')"
+      - run: npm run release -- --release-as minor
+        if: "contains(github.event.pull_request.labels.*.name, 'force-release:minor')"
+      - run: npm run release -- --release-as major
+        if: "contains(github.event.pull_request.labels.*.name, 'force-release:major')"
+      - run: git push --follow-tags origin main
+
+  
