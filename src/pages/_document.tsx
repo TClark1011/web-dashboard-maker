@@ -1,3 +1,4 @@
+// eslint-disable-next-line @next/next/no-document-import-in-page
 import Document, {
 	Html,
 	Head,
@@ -6,9 +7,9 @@ import Document, {
 	DocumentContext,
 } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import createEmotionCache from '../utils/createEmotionCache';
 import { Children } from 'react';
 import { AppType } from 'next/dist/shared/lib/utils';
+import createEmotionCache from '../utils/createEmotionCache';
 import CustomAppProps from '../type/CustomAppProps';
 
 class MyDocument extends Document {
@@ -31,6 +32,7 @@ class MyDocument extends Document {
 			<style
 				data-emotion={`${style.key} ${style.ids.join(' ')}`}
 				key={style.key}
+				// eslint-disable-next-line react/no-danger
 				dangerouslySetInnerHTML={{ __html: style.css }}
 			/>
 		));

@@ -1,11 +1,16 @@
 {
 	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"project": "./tsconfig.json"
+	},
 	"plugins": ["@typescript-eslint", "jest"],
 	"extends": [
 		"eslint:recommended",
 		"plugin:react/recommended",
-		"plugin:react-hooks/recommended",
 		"plugin:@typescript-eslint/recommended",
+		"airbnb",
+		"airbnb/hooks",
+		"airbnb-typescript",
 		"plugin:jest/recommended",
 		"plugin:jest/style",
 		"thomas-clark",
@@ -37,6 +42,7 @@
 		"@typescript-eslint/explicit-module-boundary-types": 0,
 		"quotes": ["error", "single"],
 		"jsdoc/require-jsdoc": 0,
-		"arrow-body-style": ["error", "as-needed"]
+		"arrow-body-style": ["error", "as-needed"],
+		"react/jsx-props-no-spreading": 0
 	}
 }
